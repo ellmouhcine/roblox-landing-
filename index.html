@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Robux Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="box">
+    <img src="roblox-logo.png" alt="Roblox" width="150">
+    <h1>Unlock Free Robux Today!</h1>
+    <p>Complete one quick offer to verify and claim your Robux instantly.</p>
+    <p id="timer"></p>
+    <a href="YOUR_OGADS_LOCKER_LINK_HERE" class="btn">Get Free Robux</a>
+    <div id="notifications"></div>
+  </div>
+
+  <script>
+  // Countdown timer
+  let time = 120;
+  let timer = setInterval(() => {
+    document.getElementById("timer").innerHTML = "Offer expires in " + time + "s";
+    time--;
+    if (time < 0) clearInterval(timer);
+  }, 1000);
+
+  // Fake notifications
+  const users = ["Alex", "John", "Maya", "Sara", "Mike"];
+  setInterval(() => {
+    const user = users[Math.floor(Math.random() * users.length)];
+    document.getElementById("notifications").innerHTML = 
+      `<p>✅ ${user} just unlocked free Robux!</p>`;
+  }, 5000);
+  </script>
+</body>
+</html>
